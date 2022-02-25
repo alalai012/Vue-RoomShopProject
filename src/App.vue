@@ -16,7 +16,9 @@
     <h4>지금 결제하면 20% 할인!</h4>
   </div>
   -->
+  <transition name="fade">
   <Modal @해줘="modalopen = false;" :selected = 'selected' :원룸들 = '원룸들' :modalopen = "modalopen"/>
+  </transition>
   <Discount/>
 
   <div class="databind" v-for="(room, i) in 원룸들" :key="i">
@@ -56,7 +58,34 @@ export default {
 </script>
 
 <style>
+.fade-enter-from {
+  transform: translateY(-1000px);
+}
+.fade-enter-active {
+  transition: 1s;
+}
+.fade-enter-to {
+  transform: translateY(0px);
+}
 
+.fade-leave-from {
+  opacity:0;
+}
+.fade-leave-active {
+  transition: 1s;
+}
+.fade-leave-to {
+  opacity: 1;
+}
+
+
+.start{
+  opacity:0;
+  transition: all 1s;
+}
+.end{
+  opacity: 1;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
