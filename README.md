@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Vue-RoomShopProject
 코딩애플 Vue.js 강의
 =======
@@ -23,7 +23,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> origin/master
